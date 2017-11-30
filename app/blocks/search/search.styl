@@ -1,0 +1,40 @@
+.search
+  &__wrap
+    padding-top 40px
+  &__form
+    display flex
+    flex-direction row
+    flex-basis .000001px
+  &__container
+    flex 1
+  &__input
+    padding 17px 20px
+    width 100%
+    background-color #fff
+    border-width 2px
+    border-style solid
+    border-color $orange
+    border-radius 2px 0 0 2px
+    &::placeholder
+      color $grey
+
+  &__button
+    border-radius 0 2px 2px 0
+
+  &__filter
+    display flex
+    justify-content: space-between
+  &__filter, &__parameters
+    margin-top 12px
+    color $grey
+  &__parameters
+    text-align right
+
+label
+  margin-right 15px
+  cursor pointer
+  &:last-child
+    margin-right 0
+
+:checked + label
+  color $black

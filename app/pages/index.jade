@@ -1,0 +1,111 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/icon/icon
+
+block head
+	- var pageTitle = 'Bazar Project Template';
+
+block content
+	header
+		.row.header
+			.col.logo
+				.logo__img
+					img(src="../Cyprus_BAZAR@1x.png" alt="cyprus bazar")
+				h6.logo__subtitle Бесплатные объявления
+			.col.application
+				a.btn.application__space(href="")
+					+icon('apple', true).icon.icon--grey
+				a.btn.application__space(href="")
+					+icon('google-play', true).icon.icon--grey
+
+				//- // Доделать дропдаун меню
+				.dropdown RU
+			.col.person
+				.person__likes
+					button.btn
+						+icon('like', true).icon.icon_left.icon--grey.btn__icon
+						span.btn__label 15
+
+				//- // Доделать дропдаун меню
+				.person__username.dropdown
+					+icon('user', true).icon.icon_left.icon--grey
+					span.btn__label Константин
+				a.btn.btn--large.btn--green(href='#')
+					+icon('add', true).icon.icon_left.icon--white.btn__icon
+					span.btn__label.btn--green Подать объявление
+	section
+		.row.search.col
+			.search__wrap
+				form.search__form
+					.search__container
+						input.search__input(type="text" name="text" placeholder="37 объявлений сегодня, всего 12 232")
+						.search__filter
+							.search__block-1
+								input(type="checkbox" id="title")
+								label(for="title") В заголовке
+								input(type="checkbox" id="photo")
+								label(for="photo") С фото
+								input(type="checkbox" id="newonly")
+								label(for="newonly") Только новые
+							.search__block-2
+								//- // Доделать дропдаун меню
+								label(for="title") Все города
+								label(for="photo") Все разделы
+					button.search__button.btn.btn--large.btn--orange(type="submit" role="button")
+						+icon('search', true).icon.icon--white.btn__icon
+						span.btn__label Найти объявление
+
+	main.row
+		nav.navbar.col
+			a(href="#").navbar__link
+				span.btn__label Главная
+			a(href="#").navbar__link
+				+icon('right-arrow', true).icon.icon_left.icon--grey.icon--small
+				span.btn__label Недвижимость
+			a(href="#").navbar__link
+				+icon('right-arrow', true).icon.icon_left.icon--grey.icon--small
+				span.btn__label Квартиры
+			a(href="#").navbar__link
+				+icon('right-arrow', true).icon.icon_left.icon--grey.icon--small
+				span.btn__label Продам трехспальные апартаменты в центре Лимассола
+		section.product-summary
+			.product-summary__headline.col
+				.product-title
+					.product-title__text-container
+						.title__text
+							h1.title.title_size_40 Продам трехспальные апартаменты в центре Лимассола
+					.product-title__toolbar
+						.product-title__description
+							span.btn__label.product-title__item-label Лимассол
+							span.btn__label.product-title__item-label 26 Апр 18:04
+							span.btn__label.product-title__item-label 34 просмотра сегодня, всего 238
+							span.btn__label.product-title__item-label № 34711
+						.product-title__features
+							a(href="#").navbar__link
+								+icon('left-arrow', true).icon.icon--grey.icon--small
+								span.btn__label Назад
+							a(href="#").navbar__link
+								span.btn__label Вперед
+								+icon('right-arrow', true).icon.icon--grey.icon--small
+			.product-summary__content.row
+				.col.product-summary__gallery
+					.product-summary__image-container
+						img(src="http://via.placeholder.com/560x420", alt="")
+				.product-content-block
+					.product-content-block__price &euro; 380 000
+				p.col some text
+
+	br
+	hr
+	+icon('danger', true).icon
+	+icon('mail', true).icon
+	+icon('new-message', true).icon
+	+icon('phone-call', true).icon
+	+icon('left-arrow ', true).icon
+	+icon('right-arrow', true).icon
+	+icon('search', true).icon
+	+icon('star', true).icon
+	+icon('printer-outline-variant-with-paper', true).icon
+	+icon('facebook-logo', true).icon
+	+icon('google-plus', true).icon
+	+icon('linkedin-logo', true).icon
+	+icon('twitter-logo-silhouette', true).icon
