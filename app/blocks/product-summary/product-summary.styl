@@ -46,3 +46,22 @@
 
   &__text
     margin-right 10px
+
+.product-content-block
+  &__price
+    position relative
+    font-size 40px
+    color $green_text
+    background-color $grey_light
+    padding 16px 0
+    width 100%
+    &:before
+      content ''
+      position absolute
+      left 0
+      width 0
+      height 0
+      border-top 56px solid transparent
+      border-bottom 56px solid transparent
+      border-right 56px solid pink
+
