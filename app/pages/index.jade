@@ -22,16 +22,16 @@ block content
 			.col.person
 				.person__likes
 					button.btn
-						+icon('like', true).icon.icon_left.icon--grey.btn__icon
-						span.btn__label 15
+						+icon('like', true).icon.icon_left.icon--grey
+						span.btn_vertical-middle 15
 
 				//- // Доделать дропдаун меню
 				.person__username.dropdown
 					+icon('user', true).icon.icon_left.icon--grey
-					span.btn__label Константин
+					span.btn_vertical-middle Константин
 				a.btn.btn--large.btn--green(href='#')
-					+icon('add', true).icon.icon_left.icon--white.btn__icon
-					span.btn__label.btn--green Подать объявление
+					+icon('add', true).icon.icon--white.btn__icon
+					span.btn_vertical-middle.btn_text-white Подать объявление
 	section
 		.row.search.col
 			.search__wrap
@@ -92,7 +92,64 @@ block content
 						img(src="http://via.placeholder.com/560x420", alt="")
 				.col.product-content-block
 					.product-content-block__price &euro; 380 000
-				p.col some text
+					.product-content-block__content
+						.product-details
+							.product-details__key Тип
+							.product-details__value Недвижимость
+					.product-content-block__content
+						.product-details
+							.product-details__key Город
+							.product-details__value Лимассол
+					.product-content-block__content
+						.product-details
+							.product-details__key Район
+							.product-details__value Рекреационный центр отдыха
+					.product-content-block__content
+						.product-details
+							.product-details__key Спальни
+							.product-details__value 3 спальни и диван в гостиной
+					.product-content-block__content
+						a.product-content-block__summary(href="#")
+							span.btn__label.product-content-block__span Смотреть все параметры
+							+icon('down-arrow', true).icon.icon--green.icon--small
+
+				.col
+					a.btn.btn--large.btn--green(href='#')
+						+icon('phone-call', true).icon.icon--white.btn__icon
+						span.btn_vertical-middle.btn_text-white Показать контакты
+					a.btn.btn--large(href='#')
+						+icon('mail', true).icon.icon--grey.btn__icon
+						span.btn_vertical-middle Написать владельцу
+					a.btn.btn--large(href='#')
+						+icon('like', true).icon.icon--grey.btn__icon
+						span.btn_vertical-middle В избранное
+					a.btn.btn--large(href='#')
+						+icon('danger', true).icon.icon--grey.btn__icon
+						span.btn_vertical-middle Пожаловаться
+					a.btn.btn--large(href='#')
+						+icon('star', true).icon.icon--orange.btn__icon
+						span.btn_vertical-middle.btn_text-orange Поднять объявление
+					a(href='#')
+						img(src="../banner-adv.png", alt="")
+			.product-social.col
+				.product-social__links
+					button.btn.product-social__item
+						+icon('new-message', true).icon.icon_left.icon--grey
+					button.btn.product-social__item
+						+icon('printer-outline-variant-with-paper', true).icon.icon_left.icon--grey
+					button.btn.product-social__item
+						+icon('facebook-logo', true).icon.icon_left.icon--grey
+						span.btn_vertical-middle 55
+					button.btn.product-social__item
+						+icon('google-plus', true).icon.icon_left.icon--grey
+						span.btn_vertical-middle 12
+					button.btn.product-social__item
+						+icon('twitter-logo-silhouette', true).icon.icon_left.icon--grey
+						span.btn_vertical-middle 7
+					button.btn.product-social__item
+						+icon('linkedin-logo', true).icon.icon_left.icon--grey
+
+			.product-description
 
 	br
 	hr

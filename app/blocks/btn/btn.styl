@@ -1,23 +1,30 @@
 .btn
   position relative
+  display block
   border none
   border-radius 2px
   text-align left
 
   &--large
-    padding 0 24px
+    padding-left 24px
     width 236px
     font-size 16px
-    line-height 48px
+    line-height 56px
     max-height 56px
 
   &--green
-    color $white
+    // color $white
     background-color $green
   &--orange
     color $white
     background-color $orange
   &__icon
     margin-right 9px
-  &__label
+
+  &_vertical-middle
     vertical-align middle
+
+  &_text-white
+    color $white
+  &_text-orange
+    color $orange

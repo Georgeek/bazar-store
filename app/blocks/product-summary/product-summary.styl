@@ -50,18 +50,49 @@
 .product-content-block
   &__price
     position relative
-    font-size 40px
+    font-size 30px
     color $green_text
     background-color $grey_light
     padding 16px 0
     width 100%
+    line-height 1.2
     &:before
       content ''
       position absolute
-      left 0
+      top 0
+      left -20px
       width 0
       height 0
-      border-top 56px solid transparent
-      border-bottom 56px solid transparent
-      border-right 56px solid pink
+      border-top 34px solid transparent
+      border-bottom 34px solid transparent
+      border-right 20px solid $grey_light
 
+  &__content
+    margin-top 27px
+
+  &__span
+    margin-right 8px
+
+  a
+    color $green_text
+
+.product-details
+  display flex
+  flex-direction column
+  &__key
+    margin-bottom 7px
+    color $grey
+    font-size 13px
+  &__value
+    color $black
+    font-size 16px
+
+.product-social
+  &__links
+    margin-top 47px
+    display flex
+    justify-content flex-end
+  &__item
+    margin-right 27px
+    &:last-child
+      margin-right 0
