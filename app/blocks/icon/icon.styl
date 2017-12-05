@@ -1,7 +1,7 @@
 .icon
   // удалить отступ вправо
   width 23px
-  height 23px
+  height 25px
   vertical-align middle
   &_left
     margin-right 0px
@@ -16,3 +16,35 @@
     fill $green_text
   &--orange
     fill $orange
+
+  &__social
+    position absolute
+    top 5px
+    left 5px
+    width 14px
+    height 14px
+
+  &__box
+    position relative
+    width 25px
+    height 24px
+    text-align center
+
+  &_b-blue
+    background-color $blue
+  &_b-red
+    background-color $red
+  &_b-twitt-blue
+    background-color $twitt_blue
+  &_b-link-blue
+    background-color $link_blue
+  &_hover
+    &:hover > svg
+      fill $orange
+
+  &_like-active
+    display inline-block
+  &_like-inactive
+    display none
+
+

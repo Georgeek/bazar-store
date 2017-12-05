@@ -133,36 +133,116 @@ block content
 						img(src="../banner-adv.png", alt="")
 			.product-social.col
 				.product-social__links
-					button.btn.product-social__item
-						+icon('new-message', true).icon.icon_left.icon--grey
-					button.btn.product-social__item
-						+icon('printer-outline-variant-with-paper', true).icon.icon_left.icon--grey
-					button.btn.product-social__item
-						+icon('facebook-logo', true).icon.icon_left.icon--grey
+					.product-social__item
+						button.btn.icon_hover
+							+icon('new-message', true).icon.icon_left.icon--grey
+					.product-social__item
+						button.btn.icon_hover
+							+icon('printer-outline-variant-with-paper', true).icon.icon_left.icon--grey
+					.product-social__item
+						button.btn.icon__box.icon_b-blue
+							+icon('facebook-logo', true).icon.icon__social.icon_left.icon--white
 						span.btn_vertical-middle 55
-					button.btn.product-social__item
-						+icon('google-plus', true).icon.icon_left.icon--grey
+					.product-social__item
+						button.btn.icon__box.icon_b-red
+							+icon('google-plus', true).icon.icon__social.icon_left.icon--white
 						span.btn_vertical-middle 12
-					button.btn.product-social__item
-						+icon('twitter-logo-silhouette', true).icon.icon_left.icon--grey
+					.product-social__item
+						button.btn.icon__box.icon_b-twitt-blue
+							+icon('twitter-logo-silhouette', true).icon.icon__social.icon_left.icon--white
 						span.btn_vertical-middle 7
-					button.btn.product-social__item
-						+icon('linkedin-logo', true).icon.icon_left.icon--grey
+					.product-social__item
+						button.btn.icon__box.icon_b-link-blue
+							+icon('linkedin-logo', true).icon.icon__social.icon_left.icon--white
 
 			.product-description
+				.product-description__layout.col
+					.product-description__description
+						| Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est facere architecto qui perspiciatis cupiditate dicta, quas ab fuga porro tenetur non sed ipsa eveniet, modi quos illo culpa dolore fugit! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est facere architecto qui perspiciatis cupiditate dicta, quas ab fuga porro tenetur non sed ipsa eveniet, modi quos illo culpa dolore fugit! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est facere architecto qui perspiciatis cupiditate dicta, quas ab fuga porro tenetur non sed ipsa eveniet, modi quos illo culpa dolore fugit!
+				.product-description__grid.row
+					.product-description__content.col
+						.product-details
+							.product-details__key Тип
+							.product-details__value Недвижимость
+					.product-description__content.col
+						.product-details
+							.product-details__key Город
+							.product-details__value Лимассол
+					.product-description__content.col
+						.product-details
+							.product-details__key Район
+							.product-details__value Рекреационный центр отдыха
+					.product-description__content.col.col-2.row-2
+						.product-details
+							.product-details__key Дополнительно
+							.product-details__value Общественный бассейн и тренажерный зал для жильцов комплекса, бар, рядом магазин, детский сад и школа
+				.product-location
+					.product-location__map.col
+						#google-map
+				.product-relatives
+					.product-relatives__wrap
+						.product-title.col
+							.product-title__text-container
+								.title__text
+									h1.title.title_size_40 Похожие объявления
+						.product-relatives__items.row
+							.product-relatives__item.col
+								.product-relatives__image-container
+									a(href="#")
+										.product-relatives__picture
+								.product-relatives__title
+									| Квартирко Квартирко Квартиркоeeeeee
+								.product-relatives__footer
+									.product-relatives__price 320 000 &euro;
+									.product-relatives__like
+										button.btn
+											+icon('like', true).icon.icon_left.icon--grey
+							.product-relatives__item.col
+								.product-relatives__image-container
+									a(href="#")
+										.product-relatives__picture
+								.product-relatives__title
+									| Квартирко Квартирко Квартиркоeeeeee
+								.product-relatives__footer
+									.product-relatives__price 320 000 &euro;
+									.product-relatives__like
+										button.btn
+											+icon('like', true).icon.icon_left.icon--grey
+							.product-relatives__item.col
+								.product-relatives__image-container
+									a(href="#")
+										.product-relatives__picture
+								.product-relatives__title
+									| Квартирко Квартирко Квартиркоeeeeee
+								.product-relatives__footer
+									.product-relatives__price 320 000 &euro;
+									.product-relatives__like
+										button.btn.btn__like
+											+icon('like', true).icon.icon_left.icon--grey.icon_like-active
+											+icon('favorite-heart-button', true).icon.icon_left.icon--orange.icon_like-inactive
+							.product-relatives__item.col
+								.product-relatives__image-container
+									a(href="#")
+										.product-relatives__picture
+								.product-relatives__title
+									| Квартирко Квартирко Квартиркоeeeeee
+								.product-relatives__footer
+									.product-relatives__price 320 000 &euro;
+									.product-relatives__like
+										button.btn.btn__like
+											+icon('favorite-heart-button', true).icon.icon_left.icon--orange.icon_like-active
+		footer
+			.footer.col
+				.footer__nav.row
+					.footer__menu
+						.footer__menu-item Объявления
+						.footer__menu-item Акции и бонусы
+						.footer__menu-item Информация
+					.footer__social Гугл и Фейсбук
+				.footer__description
+					| Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium saepe itaque asperiores laborum optio hic fugit, voluptate sequi accusamus ullam veniam tenetur provident dolorem atque explicabo temporibus nesciunt quidem dolor.
+				.footer__about
+					| &#9400; Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, consectetur! Quisquam, et ipsum? Maxime sequi amet deleniti doloremque illo dignissimos ducimus corporis, in dolores aperiam nemo, veritatis quaerat non distinctio?
 
-	br
-	hr
-	+icon('danger', true).icon
-	+icon('mail', true).icon
-	+icon('new-message', true).icon
-	+icon('phone-call', true).icon
-	+icon('left-arrow ', true).icon
-	+icon('right-arrow', true).icon
-	+icon('search', true).icon
-	+icon('star', true).icon
-	+icon('printer-outline-variant-with-paper', true).icon
-	+icon('facebook-logo', true).icon
-	+icon('google-plus', true).icon
-	+icon('linkedin-logo', true).icon
-	+icon('twitter-logo-silhouette', true).icon
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtbg6QznaM9xO_-qprLkTPs9rnwOPsj_k&callback=initMap")
+
