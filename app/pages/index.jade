@@ -32,29 +32,28 @@ block content
 				a.btn.btn--large.btn--green(href='#')
 					+icon('add', true).icon.icon--white.btn__icon
 					span.btn_vertical-middle.btn_text-white Подать объявление
-	section
-		.row.search.col
-			.search__wrap
-				form.search__form
-					.search__container
-						input.search__input(type="text" name="text" placeholder="37 объявлений сегодня, всего 12 232")
-						.search__filter
-							.search__block-1
-								input(type="checkbox" id="title")
-								label(for="title") В заголовке
-								input(type="checkbox" id="photo")
-								label(for="photo") С фото
-								input(type="checkbox" id="newonly")
-								label(for="newonly") Только новые
-							.search__block-2
-								//- // Доделать дропдаун меню
-								label(for="title") Все города
-								label(for="photo") Все разделы
+	section.search.row
+		.search__wrap.col
+			form.search__form
+				.search__container
+					input.search__input(type="text" name="text" placeholder="37 объявлений сегодня, всего 12 232")
 					button.search__button.btn.btn--large.btn--orange(type="submit" role="button")
 						+icon('search', true).icon.icon--white.btn__icon
 						span.btn__label Найти объявление
+					.search__filter
+						.search__block-1
+							input(type="checkbox" id="title")
+							label(for="title") В заголовке
+							input(type="checkbox" id="photo")
+							label(for="photo") С фото
+							input(type="checkbox" id="newonly")
+							label(for="newonly") Только новые
+						.search__block-2
+							//- // Доделать дропдаун меню
+							label(for="title") Все города
+							label(for="photo") Все разделы
 
-	main.row
+	main
 		nav.navbar.col
 			a(href="#").navbar__link
 				span.btn__label Главная
@@ -176,10 +175,10 @@ block content
 						.product-details
 							.product-details__key Дополнительно
 							.product-details__value Общественный бассейн и тренажерный зал для жильцов комплекса, бар, рядом магазин, детский сад и школа
-				.product-location
-					.product-location__map.col
-						#google-map
-				.product-relatives
+		section.product-location
+			.product-location__map.col
+				#google-map
+		section.product-relatives
 					.product-relatives__wrap
 						.product-title.col
 							.product-title__text-container
@@ -231,18 +230,22 @@ block content
 									.product-relatives__like
 										button.btn.btn__like
 											+icon('favorite-heart-button', true).icon.icon_left.icon--orange.icon_like-active
-		footer
-			.footer.col
-				.footer__nav.row
-					.footer__menu
-						.footer__menu-item Объявления
-						.footer__menu-item Акции и бонусы
-						.footer__menu-item Информация
-					.footer__social Гугл и Фейсбук
-				.footer__description
-					| Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium saepe itaque asperiores laborum optio hic fugit, voluptate sequi accusamus ullam veniam tenetur provident dolorem atque explicabo temporibus nesciunt quidem dolor.
-				.footer__about
-					| &#9400; Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, consectetur! Quisquam, et ipsum? Maxime sequi amet deleniti doloremque illo dignissimos ducimus corporis, in dolores aperiam nemo, veritatis quaerat non distinctio?
+	footer
+		.footer.col
+			.footer__nav.row
+				.footer__menu
+					.footer__menu-item Объявления
+					.footer__menu-item Акции и бонусы
+					.footer__menu-item Информация
+				.footer__social
+					a.btn(href="#").footer__button
+						+icon('facebook-logo', true).icon.icon--grey
+					a.btn(href="#").footer__button
+						+icon('google-plus', true).icon.icon--grey
+			.footer__description
+				| Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium saepe itaque asperiores laborum optio hic fugit, voluptate sequi accusamus ullam veniam tenetur provident dolorem atque explicabo temporibus nesciunt quidem dolor.
+			.footer__about
+				| &#9400; Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, consectetur! Quisquam, et ipsum? Maxime sequi amet deleniti doloremque illo dignissimos ducimus corporis, in dolores aperiam nemo, veritatis quaerat non distinctio?
 
 	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtbg6QznaM9xO_-qprLkTPs9rnwOPsj_k&callback=initMap")
 
