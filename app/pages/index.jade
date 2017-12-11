@@ -11,35 +11,39 @@ block content
 				.logo__img
 					img(src="../Cyprus_BAZAR@1x.png" alt="cyprus bazar")
 				h6.logo__subtitle Бесплатные объявления
-			.col.application
-				a.btn.application__space(href="")
-					+icon('apple', true).icon.icon--grey
-				a.btn.application__space(href="")
-					+icon('google-play', true).icon.icon--grey
+			.col.header__app
+				.application
+					a.btn.application__space(href="")
+						+icon('apple', true).icon.icon--grey
+					a.btn.application__space(href="")
+						+icon('google-play', true).icon.icon--grey
 
-				//- // Доделать дропдаун меню
-				.dropdown RU
-			.col.person
-				.person__likes
-					button.btn
-						+icon('like', true).icon.icon_left.icon--grey
-						span.btn_vertical-middle 15
+					//- Доделать дропдаун меню
+					.dropdown RU
 
-				//- // Доделать дропдаун меню
-				.person__username.dropdown
-					+icon('user', true).icon.icon_left.icon--grey
-					span.btn_vertical-middle Константин
-				a.btn.btn--large.btn--green(href='#')
-					+icon('add', true).icon.icon--white.btn__icon
-					span.btn_vertical-middle.btn_text-white Подать объявление
-	section.search.row
-		.search__wrap.col
+				.header__user
+					.header__likes
+						button.btn
+							+icon('like', true).icon.icon_left.icon--grey
+							span.btn_vertical-middle 15
+					//- Доделать дропдаун меню
+					.header__username.dropdown
+						+icon('user', true).icon.icon_left.icon--grey
+						span.btn_vertical-middle Константин
+					a.btn.btn--large.btn--green.header__btn(href='#')
+						+icon('add', true).icon.icon--white.btn__icon
+						span.btn_vertical-middle.btn_text-white Подать объявление
+
+					.header__menu
+						| &#9776;
+
+	section.search
+		.search__wrap
 			form.search__form
+
 				.search__container
-					input.search__input(type="text" name="text" placeholder="37 объявлений сегодня, всего 12 232")
-					button.search__button.btn.btn--large.btn--orange(type="submit" role="button")
-						+icon('search', true).icon.icon--white.btn__icon
-						span.btn__label Найти объявление
+					.search__input-block
+						input.search__input(type="text" name="text" placeholder="37 объявлений сегодня, всего 12 232")
 					.search__filter
 						.search__block-1
 							input(type="checkbox" id="title")
@@ -53,18 +57,22 @@ block content
 							label(for="title") Все города
 							label(for="photo") Все разделы
 
+				button.search__button.btn.btn--large.btn--orange(type="submit" role="button")
+					+icon('search', true).icon.icon--white.btn__icon
+					span.btn__label Найти объявление
+
 	main
 		nav.navbar.col
 			a(href="#").navbar__link
 				span.btn__label Главная
 			a(href="#").navbar__link
-				+icon('right-arrow', true).icon.icon_left.icon--grey.icon--small
+				+icon('right-arrow', true).icon.icon_left.icon--grey.icon--small.navbar--ico-right
 				span.btn__label Недвижимость
 			a(href="#").navbar__link
-				+icon('right-arrow', true).icon.icon_left.icon--grey.icon--small
+				+icon('right-arrow', true).icon.icon_left.icon--grey.icon--small.navbar--ico-right
 				span.btn__label Квартиры
 			a(href="#").navbar__link
-				+icon('right-arrow', true).icon.icon_left.icon--grey.icon--small
+				+icon('right-arrow', true).icon.icon_left.icon--grey.icon--small.navbar--ico-right
 				span.btn__label Продам трехспальные апартаменты в центре Лимассола
 		section.product-summary
 			.product-summary__headline.col
@@ -230,6 +238,7 @@ block content
 									.product-relatives__like
 										button.btn.btn__like
 											+icon('favorite-heart-button', true).icon.icon_left.icon--orange.icon_like-active
+
 	footer
 		.footer.col
 			.footer__nav.row
@@ -248,4 +257,3 @@ block content
 				| &#9400; Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, consectetur! Quisquam, et ipsum? Maxime sequi amet deleniti doloremque illo dignissimos ducimus corporis, in dolores aperiam nemo, veritatis quaerat non distinctio?
 
 	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtbg6QznaM9xO_-qprLkTPs9rnwOPsj_k&callback=initMap")
-
