@@ -9,20 +9,20 @@
 
   &__container
     flex 1
-    position: relative;
+    position relative
 
   &__input-block
     height 100%
 
   &__input
-    flex 1
-    padding 16px 20px
-    width 100%
-    background-color #fff
-    border: none
     position absolute
     top 0
     bottom 0
+    padding 16px 20px
+    width 100%
+    flex 1
+    background-color #fff
+    border none
     border-width 2px
     border-style solid
     border-color $orange
@@ -32,16 +32,25 @@
       color $grey
 
   &__button
+    @extend .btn--large
+    padding 0 24px
     border-radius 0 2px 2px 0
     border 2px solid $orange
+    color $white
+    background-color $orange
 
     @media (max-width: 1050px)
       .btn__label
         display none
+      max-width max-content
 
   &__filter
     display flex
     justify-content: space-between
+
+    @media (max-width: 1050px)
+      display none
+
   &__filter, &__parameters
     margin-top 12px
     color $grey

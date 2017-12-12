@@ -7,11 +7,11 @@ block head
 block content
 	header
 		.row.header
-			.col.logo
+			.logo
 				.logo__img
 					img(src="../Cyprus_BAZAR@1x.png" alt="cyprus bazar")
 				h6.logo__subtitle Бесплатные объявления
-			.col.header__app
+			.header__app
 				.application
 					a.btn.application__space(href="")
 						+icon('apple', true).icon.icon--grey
@@ -57,12 +57,12 @@ block content
 							label(for="title") Все города
 							label(for="photo") Все разделы
 
-				button.search__button.btn.btn--large.btn--orange(type="submit" role="button")
+				button.search__button.btn.btn--orange(type="submit" role="button")
 					+icon('search', true).icon.icon--white.btn__icon
 					span.btn__label Найти объявление
 
 	main
-		nav.navbar.col
+		nav.navbar
 			a(href="#").navbar__link
 				span.btn__label Главная
 			a(href="#").navbar__link
@@ -75,7 +75,7 @@ block content
 				+icon('right-arrow', true).icon.icon_left.icon--grey.icon--small.navbar--ico-right
 				span.btn__label Продам трехспальные апартаменты в центре Лимассола
 		section.product-summary
-			.product-summary__headline.col
+			.product-summary__headline
 				.product-title
 					.product-title__text-container
 						.title__text
@@ -94,10 +94,10 @@ block content
 								span.btn__label Вперед
 								+icon('right-arrow', true).icon.icon--grey.icon--small
 			.product-summary__content.row
-				.col.product-summary__gallery
+				.product-summary__gallery
 					.product-summary__image-container
 						img(src="http://via.placeholder.com/560x420", alt="")
-				.col.product-content-block
+				.product-content-block
 					.product-content-block__price &euro; 380 000
 					.product-content-block__content
 						.product-details
@@ -120,7 +120,7 @@ block content
 							span.btn__label.product-content-block__span Смотреть все параметры
 							+icon('down-arrow', true).icon.icon--green.icon--small
 
-				.col
+				.product-summary__buttons
 					a.btn.btn--large.btn--green(href='#')
 						+icon('phone-call', true).icon.icon--white.btn__icon
 						span.btn_vertical-middle.btn_text-white Показать контакты
@@ -138,7 +138,7 @@ block content
 						span.btn_vertical-middle.btn_text-orange Поднять объявление
 					a(href='#')
 						img(src="../banner-adv.png", alt="")
-			.product-social.col
+			.product-social
 				.product-social__links
 					.product-social__item
 						button.btn.icon_hover
@@ -163,37 +163,37 @@ block content
 							+icon('linkedin-logo', true).icon.icon__social.icon_left.icon--white
 
 			.product-description
-				.product-description__layout.col
+				.product-description__layout
 					.product-description__description
 						| Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est facere architecto qui perspiciatis cupiditate dicta, quas ab fuga porro tenetur non sed ipsa eveniet, modi quos illo culpa dolore fugit! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est facere architecto qui perspiciatis cupiditate dicta, quas ab fuga porro tenetur non sed ipsa eveniet, modi quos illo culpa dolore fugit! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est facere architecto qui perspiciatis cupiditate dicta, quas ab fuga porro tenetur non sed ipsa eveniet, modi quos illo culpa dolore fugit!
 				.product-description__grid.row
-					.product-description__content.col
+					.product-description__content
 						.product-details
 							.product-details__key Тип
 							.product-details__value Недвижимость
-					.product-description__content.col
+					.product-description__content
 						.product-details
 							.product-details__key Город
 							.product-details__value Лимассол
-					.product-description__content.col
+					.product-description__content
 						.product-details
 							.product-details__key Район
 							.product-details__value Рекреационный центр отдыха
-					.product-description__content.col.col-2.row-2
+					.product-description__content.col-2.row-2
 						.product-details
 							.product-details__key Дополнительно
 							.product-details__value Общественный бассейн и тренажерный зал для жильцов комплекса, бар, рядом магазин, детский сад и школа
 		section.product-location
-			.product-location__map.col
+			.product-location__map
 				#google-map
 		section.product-relatives
 					.product-relatives__wrap
-						.product-title.col
+						.product-title
 							.product-title__text-container
 								.title__text
 									h1.title.title_size_40 Похожие объявления
 						.product-relatives__items.row
-							.product-relatives__item.col
+							.product-relatives__item
 								.product-relatives__image-container
 									a(href="#")
 										.product-relatives__picture
@@ -204,7 +204,7 @@ block content
 									.product-relatives__like
 										button.btn
 											+icon('like', true).icon.icon_left.icon--grey
-							.product-relatives__item.col
+							.product-relatives__item
 								.product-relatives__image-container
 									a(href="#")
 										.product-relatives__picture
@@ -215,7 +215,7 @@ block content
 									.product-relatives__like
 										button.btn
 											+icon('like', true).icon.icon_left.icon--grey
-							.product-relatives__item.col
+							.product-relatives__item
 								.product-relatives__image-container
 									a(href="#")
 										.product-relatives__picture
@@ -227,7 +227,7 @@ block content
 										button.btn.btn__like
 											+icon('like', true).icon.icon_left.icon--grey.icon_like-active
 											+icon('favorite-heart-button', true).icon.icon_left.icon--orange.icon_like-inactive
-							.product-relatives__item.col
+							.product-relatives__item
 								.product-relatives__image-container
 									a(href="#")
 										.product-relatives__picture
@@ -240,7 +240,7 @@ block content
 											+icon('favorite-heart-button', true).icon.icon_left.icon--orange.icon_like-active
 
 	footer
-		.footer.col
+		.footer
 			.footer__nav.row
 				.footer__menu
 					.footer__menu-item Объявления
