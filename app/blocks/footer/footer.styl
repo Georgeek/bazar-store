@@ -1,9 +1,14 @@
 .footer
   margin-top 75px
   &__nav
-    grid-template-columns repeat(2, 2fr)
+    grid-template-columns repeat(6, 1fr)
+    grid-template-areas "menu menu menu menu menu social"
+    @media (max-width: 1050px)
+      grid-template-areas "menu menu menu menu menu social"
+
 
   &__menu
+    grid-area menu
     display flex
     flex-direction row
     align-items center
@@ -12,7 +17,11 @@
     margin-right 36px
     padding-left 9px
     border-left 3px solid $orange
+
+    &:last-child
+      margin-right 0
   &__social
+    grid-area social
     display flex
     flex-direction row
     justify-content flex-end
